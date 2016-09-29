@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.kcode.bottommenututorial.bottomsheet.BottomSheetActivity;
 import com.kcode.bottommenututorial.dialogfragment.BottomDialog;
 
 /**
@@ -62,7 +63,7 @@ public class MainFragment extends Fragment {
 
     public void showBottomSheet() {
         Log.i(TAG,"showBottomSheet");
-
+        startActivity(BottomSheetActivity.newIntent(getActivity()));
     }
 
 }
