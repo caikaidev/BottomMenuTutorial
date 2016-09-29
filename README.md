@@ -1,7 +1,7 @@
 效果图:
 
 
-[[https://github.com/fccaikai/BottomMenuTutorial/blob/master/bottomMenu.gif|alt=octocat]]
+![https://github.com/fccaikai/BottomMenuTutorial/blob/master/bottomMenu.gif]
 
 详细介绍可以到简书上查看:
 
