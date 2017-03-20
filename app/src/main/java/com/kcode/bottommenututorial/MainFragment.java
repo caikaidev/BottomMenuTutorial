@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.kcode.bottomlib.BottomDialog;
 import com.kcode.bottommenututorial.bottomsheet.BottomSheetActivity;
-import com.kcode.bottommenututorial.dialogfragment.BottomDialog;
 
 /**
  * Created by caik on 2016/9/25.
@@ -57,8 +58,17 @@ public class MainFragment extends Fragment {
 
     public void showDialogFragment(){
         Log.i(TAG,"showDialogFragment");
-        BottomDialog bottomDialog = BottomDialog.newInstance();
-        bottomDialog.show(getChildFragmentManager(),BottomDialog.class.getSimpleName());
+//        BottomDialog bottomDialog = BottomDialog.newInstance();
+//        bottomDialog.show(getChildFragmentManager(),BottomDialog.class.getSimpleName());
+
+        BottomDialog dialog = BottomDialog.newInstance("导航到这里去",new String[]{"高德地图","百度地图"});
+        dialog.show(getChildFragmentManager(),"dialog");
+        dialog.setListener(new BottomDialog.OnClickListener() {
+            @Override
+            public void click(int position) {
+                Toast.makeText(getContext(), "" + position, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public void showBottomSheet() {
