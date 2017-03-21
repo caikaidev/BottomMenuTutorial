@@ -8,6 +8,7 @@ import android.support.v4.app.DialogFragment;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -54,6 +55,14 @@ public class BottomDialog extends DialogFragment {
         params.width = WindowManager.LayoutParams.MATCH_PARENT;
         window.setAttributes(params);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        window.getDecorView().setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dismiss();
+                return true;
+            }
+        });
+
     }
 
     @Nullable
@@ -85,6 +94,8 @@ public class BottomDialog extends DialogFragment {
                 if (mListener != null) {
                     mListener.click(position);
                 }
+
+                dismiss();
             }
         });
 
@@ -93,12 +104,7 @@ public class BottomDialog extends DialogFragment {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AnimationUtils.slideToDown(mRootView, new AnimationUtils.AnimationListener() {
-                    @Override
-                    public void onFinish() {
-                        dismiss();
-                    }
-                });
+                dismiss();
             }
         });
     }
@@ -106,6 +112,16 @@ public class BottomDialog extends DialogFragment {
     private void initData() {
         mTitle = getArguments().getString("title");
         items = getArguments().getStringArray("items");
+    }
+
+    @Override
+    public void dismiss() {
+        AnimationUtils.slideToDown(mRootView, new AnimationUtils.AnimationListener() {
+            @Override
+            public void onFinish() {
+                BottomDialog.super.dismiss();
+            }
+        });
     }
 
     public interface OnClickListener {
