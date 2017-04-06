@@ -5,7 +5,7 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 
 /**
- * 动画工具类
+ * Animations util
  * Created by caik on 16/9/22.
  */
 

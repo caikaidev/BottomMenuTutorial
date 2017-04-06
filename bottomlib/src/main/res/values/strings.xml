@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BottomLib</string>
+    <string name="cancel">取消</string>
 </resources>

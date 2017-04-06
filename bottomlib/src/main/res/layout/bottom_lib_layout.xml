@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="#00000000"
+              android:background="@color/bottom_lib_transport"
               android:orientation="vertical"
               android:padding="12dp">
 
@@ -40,7 +40,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/seletcor_bottom_lib_button"
-        android:text="取消"
+        android:text="@string/cancel"
         android:textSize="18sp"/>
 
 </LinearLayout>
