@@ -22,7 +22,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.1'
+	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.2'
 }
 ```
 
@@ -47,7 +47,7 @@ dependencies {
 <dependency>
 	<groupId>com.github.fccaikai</groupId>
 	<artifactId>BottomMenuTutorial</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 </dependency>
 ```
 
@@ -55,12 +55,19 @@ dependencies {
 
 ```
 BottomDialog dialog = BottomDialog.newInstance("title",new String[]{"item1","item2"});
-        dialog.show(getChildFragmentManager(),"dialog");
-        //add item click listener
-        dialog.setListener(new BottomDialog.OnClickListener() {
-            @Override
-            public void click(int position) {
-                Toast.makeText(getContext(), "" + position, Toast.LENGTH_LONG).show();
-            }
+/**
+*
+* BottomDialog dialog = BottomDialog.newInstance("titleText","cancelText",new String[]{"item1","item2"});
+*
+* use public static BottomDialog newInstance(String titleText,String cancelText, String[] items)
+* set cancel text
+*/
+dialog.show(getChildFragmentManager(),"dialog");
+    //add item click listener
+    dialog.setListener(new BottomDialog.OnClickListener() {
+        @Override
+        public void click(int position) {
+            Toast.makeText(getContext(), "" + position, Toast.LENGTH_LONG).show();
+        }
  });
 ```

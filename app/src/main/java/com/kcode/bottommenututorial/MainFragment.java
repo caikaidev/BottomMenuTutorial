@@ -58,10 +58,17 @@ public class MainFragment extends Fragment {
 
     public void showDialogFragment(){
         Log.i(TAG,"showDialogFragment");
-//        BottomDialog bottomDialog = BottomDialog.newInstance();
-//        bottomDialog.show(getChildFragmentManager(),BottomDialog.class.getSimpleName());
 
         BottomDialog dialog = BottomDialog.newInstance("导航到这里去",new String[]{"高德地图","百度地图"});
+
+        /**
+         *
+         * BottomDialog dialog = BottomDialog.newInstance("titleText","cancelText",new String[]{"item1","item2"});
+         *
+         * use public static BottomDialog newInstance(String titleText,String cancelText, String[] items)
+         * set cancel text
+         */
+
         dialog.show(getChildFragmentManager(),"dialog");
         dialog.setListener(new BottomDialog.OnClickListener() {
             @Override

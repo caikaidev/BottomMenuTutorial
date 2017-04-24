@@ -4,4 +4,5 @@
     <string name="show_bottom_sheet">show bottom sheet</string>
     <string name="hide_bottom_sheet_dialog">hide bottom sheet dialog</string>
     <string name="show_bottom_sheet_dialog">show bottom sheet dialog</string>
+    <string name="bottom_dialog_lib_cancel">取消啊</string>
 </resources>

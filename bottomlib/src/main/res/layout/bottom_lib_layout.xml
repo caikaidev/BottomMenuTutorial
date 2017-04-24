@@ -40,7 +40,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/seletcor_bottom_lib_button"
-        android:text="@string/cancel"
+        android:text="@string/bottom_dialog_lib_cancel"
         android:textSize="18sp"/>
 
 </LinearLayout>

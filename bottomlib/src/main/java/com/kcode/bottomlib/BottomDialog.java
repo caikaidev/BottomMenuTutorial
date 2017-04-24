@@ -27,10 +27,15 @@ import com.kcode.bottomlib.utils.AnimationUtils;
 
 public class BottomDialog extends DialogFragment {
 
-    public static BottomDialog newInstance(String title, String[] items) {
+    public static BottomDialog newInstance(String titleText, String[] items) {
+        return newInstance(titleText,null,items);
+    }
+
+    public static BottomDialog newInstance(String titleText,String cancelText, String[] items) {
 
         Bundle args = new Bundle();
-        args.putString("title", title);
+        args.putString("title", titleText);
+        args.putString("cancel",cancelText);
         args.putStringArray("items", items);
         BottomDialog fragment = new BottomDialog();
         fragment.setArguments(args);
@@ -38,6 +43,7 @@ public class BottomDialog extends DialogFragment {
     }
 
     private String mTitle;
+    private String mCancel;
     private String[] items;
     private View mRootView;
     private OnClickListener mListener;
@@ -101,6 +107,7 @@ public class BottomDialog extends DialogFragment {
 
 
         Button cancel = (Button) view.findViewById(R.id.cancel);
+        cancel.setText(mCancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +119,10 @@ public class BottomDialog extends DialogFragment {
     private void initData() {
         mTitle = getArguments().getString("title");
         items = getArguments().getStringArray("items");
+        mCancel = getArguments().getString("cancel");
+        if (TextUtils.isEmpty(mCancel)) {
+            mCancel = getResources().getString(R.string.bottom_dialog_lib_cancel);
+        }
     }
 
     @Override
