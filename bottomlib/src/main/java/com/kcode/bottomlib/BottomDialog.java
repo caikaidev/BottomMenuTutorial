@@ -42,6 +42,7 @@ public class BottomDialog extends DialogFragment {
         return fragment;
     }
 
+    private boolean isAnimation = false;
     private String mTitle;
     private String mCancel;
     private String[] items;
@@ -127,9 +128,14 @@ public class BottomDialog extends DialogFragment {
 
     @Override
     public void dismiss() {
+        if (isAnimation) {
+            return;
+        }
+        isAnimation = true;
         AnimationUtils.slideToDown(mRootView, new AnimationUtils.AnimationListener() {
             @Override
             public void onFinish() {
+                isAnimation = false;
                 BottomDialog.super.dismiss();
             }
         });

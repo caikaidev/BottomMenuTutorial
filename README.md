@@ -22,7 +22,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.2'
+	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.3'
 }
 ```
 
