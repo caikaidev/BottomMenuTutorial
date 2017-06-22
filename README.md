@@ -1,3 +1,6 @@
+[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
+[![](https://jitpack.io/v/fccaikai/BottomMenuTutorial.svg)](https://jitpack.io/#fccaikai/BottomMenuTutorial)
+[![](https://img.shields.io/badge/Author-caikai-brightgreen.svg)](https://github.com/fccaikai)
 ### ScreenShots
 
 ![](https://ww1.sinaimg.cn/large/006tNc79gy1fdua399ng7g308w0ftwk9.gif)
@@ -22,7 +25,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.3'
+	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.5'
 }
 ```
 
@@ -53,6 +56,8 @@ dependencies {
 
 ### Usage
 
+#### Defalut
+
 ```
 BottomDialog dialog = BottomDialog.newInstance("title",new String[]{"item1","item2"});
 /**
@@ -70,4 +75,20 @@ dialog.show(getChildFragmentManager(),"dialog");
             Toast.makeText(getContext(), "" + position, Toast.LENGTH_LONG).show();
         }
  });
+```
+#### Custom
+custom dialog text size & color if need.
+in your app ```corlor.xml``` define :
+```
+    <color name="bottom_lib_dialog_item_text_color">your dialog item color</color>
+    <color name="bottom_lib_dialog_title_text_color">your dialog title color</color>
+    <color name="bottom_lib_dialog_cancel_text_color">your dialog cancel color1</color>
+```
+
+```dimen.xml``` define：
+
+```
+    <dimen name="bottom_lib_dialog_item_text">your dialog item text size,default 16sp</dimen>
+    <dimen name="bottom_lib_dialog_title_text">your dialog title text title,default 18sp</dimen>
+    <dimen name="bottom_lib_dialog_cancel_text">your dialog title cancel title,default 18sp</dimen>
 ```
