@@ -6,8 +6,8 @@
 
     <TextView
         android:id="@+id/item"
-        android:textSize="18sp"
-        android:textColor="@color/bottom_lib_item_text_color"
+        android:textSize="@dimen/bottom_lib_dialog_item_text"
+        android:textColor="@color/bottom_lib_dialog_item_text_color"
         android:gravity="center"
         android:background="@drawable/seletcor_bottom_lib_button"
         android:layout_width="match_parent"

@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="bottom_lib_dialog_item_text_color">#3F51B5</color>
+    <color name="bottom_lib_dialog_title_text_color">#303F9F</color>
+    <color name="bottom_lib_dialog_cancel_text_color">#FF4081</color>
+
 </resources>

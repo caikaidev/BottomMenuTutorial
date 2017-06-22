@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="bottom_lib_transport">#00000000</color>
-    <color name="bottom_lib_item_text_color">#333333</color>
+    <color name="bottom_lib_dialog_item_text_color">#333333</color>
+    <color name="bottom_lib_dialog_title_text_color">#666666</color>
+    <color name="bottom_lib_dialog_cancel_text_color">#666666</color>
 </resources>
