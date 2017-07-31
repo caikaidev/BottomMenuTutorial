@@ -25,7 +25,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.fccaikai:BottomMenuTutorial:1.0.5'
+	compile 'com.github.fccaikai:BottomMenuTutorial:1.1.0'
 }
 ```
 
@@ -91,4 +91,13 @@ in your app ```corlor.xml``` define :
     <dimen name="bottom_lib_dialog_item_text">your dialog item text size,default 16sp</dimen>
     <dimen name="bottom_lib_dialog_title_text">your dialog title text title,default 18sp</dimen>
     <dimen name="bottom_lib_dialog_cancel_text">your dialog title cancel title,default 18sp</dimen>
+```
+
+custom dialog padding:
+
+```
+<dimen name="bottom_lib_dialog_padding_top">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_bottom">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_left">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_right">12dp</dimen>
 ```

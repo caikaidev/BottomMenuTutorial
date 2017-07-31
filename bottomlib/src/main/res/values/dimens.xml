@@ -5,4 +5,9 @@
     <dimen name="bottom_lib_dialog_title_text">18sp</dimen>
     <dimen name="bottom_lib_dialog_cancel_text">18sp</dimen>
 
+    <dimen name="bottom_lib_dialog_padding_top">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_bottom">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_left">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_right">12dp</dimen>
+
 </resources>

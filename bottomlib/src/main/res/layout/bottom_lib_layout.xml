@@ -4,7 +4,10 @@
               android:layout_height="wrap_content"
               android:background="@color/bottom_lib_transport"
               android:orientation="vertical"
-              android:padding="12dp">
+              android:paddingTop="@dimen/bottom_lib_dialog_padding_top"
+              android:paddingBottom="@dimen/bottom_lib_dialog_padding_bottom"
+              android:paddingLeft="@dimen/bottom_lib_dialog_padding_left"
+              android:paddingRight="@dimen/bottom_lib_dialog_padding_right">
 
     <LinearLayout
         android:id="@+id/titleLayout"

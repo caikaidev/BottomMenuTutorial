@@ -4,4 +4,6 @@
     <dimen name="bottom_lib_dialog_title_text">12sp</dimen>
     <dimen name="bottom_lib_dialog_cancel_text">16sp</dimen>
 
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>
