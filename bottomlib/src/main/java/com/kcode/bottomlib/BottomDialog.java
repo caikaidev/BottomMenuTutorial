@@ -65,7 +65,9 @@ public class BottomDialog extends DialogFragment {
         window.getDecorView().setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                dismiss();
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    dismiss();
+                }
                 return true;
             }
         });
